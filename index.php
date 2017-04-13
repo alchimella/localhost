@@ -1,5 +1,5 @@
 <?php 
-    require "db.php";
+    require "includes/db.php";
 
     if(isset($_SESSION['logget_user'])):
 ?> Авторизован <br>

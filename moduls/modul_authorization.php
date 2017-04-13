@@ -1,5 +1,5 @@
 <?php 
-    require "db.php";
+    require "includes/db.php";
 
     $data = $_POST;
     if(isset($data['do_login'])){

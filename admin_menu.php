@@ -1,6 +1,8 @@
 <?php
-    require "module_classes.php";
-    
+    require "db.php";
+    require "moduls/modul_classes.php";
+    require "moduls/modul_subjects.php";
+    require "moduls/modul_theachers.php";
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +27,7 @@
                </div>
            </div>
        </div>
-        <div class="container">
+       <div class="container">
             <div class="tabbable tabs-left">
                 <div class="row">
                     <div class="col-md-4">
@@ -43,7 +45,31 @@
                             <!-- Вкладка Учителя -->
                             <div class="tab-pane active in fade" id="teachers-tab">
                             <p>
-                                Текст 1
+                                <form class="form-group" method="POST">
+                                   <div class="row">
+                                       <div class="col col-lg-3">
+                                           <div class="form-group">
+                                               <label for="theacher_name">ФИО учителя</label><br>
+                                               <label for="theacher_phone" style="margin-top: 10px;">Номер телефона</label><br>
+                                               <label for="theacher_subject" style="margin-top: 10px;">Предмет</label><br>
+                                           </div>
+                                       </div>
+                                       <div class="col col-lg-8">
+                                           <div class="form-group margin_top">
+                                               <input type="text" id="theacher_name" name="num_of_theacher" style="width: 360px;"><br>     
+                                               <input type="text" id="theacher_phone" name="phone_of_theacher" style="margin-top: 10px;"><br>
+                                               <input type="text" id="theacher_subject" name="subj_of_theacher" style="margin-top: 10px;"><br> 
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <button class="btn btn-success" style="margin-left: 10px;" name="do_insert_teacher">Добавить</button>
+                                </form>
+                               
+                                <!-- Таблица со списком учителей -->
+                                  
+                                <?php 
+                                   //require "executes/exec_teachers.php"; 
+                                ?>
                             </p>
                             </div>
                             <!-- Вкладка Классы -->
@@ -52,23 +78,30 @@
                                 <form class="form-group" method="POST">
                                     <label for="class">Класс</label>
                                     <input type="text" id="class" name="num_of_class">
-                                    <button class="btn btn-success" style="margin-left: 10px;" name="do_insert">Добавить</button>
+                                    <button class="btn btn-success" style="margin-left: 10px;" name="do_insert_class">Добавить</button>
                                 </form>
                                
                                 <!-- Таблица со списком классов -->
                                   
                                 <?php 
-                                   require "exec_classes.php"; 
+                                   require "executes/exec_classes.php"; 
                                 ?>
                             </p>
                             </div>
                             <!-- Вкладка Предметы -->
                             <div class="tab-pane fade" id="subjects-tab">
                             <p>
-                               <form class="form-group">
-                                  <label for="subj">Предмет</label>
-                                  <input type="text" id="subj">
-                               </form>
+                                <form class="form-group" method="POST">
+                                    <label for="subj">Предмет</label>
+                                    <input type="text" id="subj" name="num_of_subject">
+                                    <button class="btn btn-success" style="margin-left: 10px;" name="do_insert_subj">Добавить</button>
+                                </form>
+                               
+                                <!-- Таблица со списком предметов -->
+                                  
+                                <?php 
+                                   require "executes/exec_subjects.php"; 
+                                ?>
                             </p>
                             </div>
                             <div class="tab-pane fade" id="students-tab">
@@ -81,9 +114,6 @@
                 </div>
             </div>
         </div>
-        
-        
-        
         
         <!-- jQuery -->
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
