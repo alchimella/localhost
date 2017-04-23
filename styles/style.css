@@ -1,0 +1,11 @@
+ul.navbar-nav a{
+    border-bottom: 3px solid #fff;
+}
+
+ul.navbar-nav a:hover{
+    border-bottom: 3px solid #7092BE;
+}
+
+ul.navbar-nav a:active{
+    border-bottom: 3px solid #7092BE;
+}
