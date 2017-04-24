@@ -12,7 +12,7 @@
                 <form method="post">
                 <div class="form-group">
                     <input type="file" name="pic_of_post" id="image">
-                    <input type="text" name="num_of_post">
+                    <input type="text" name="num_of_post" style="margin-top: 5px;">
                     
                 </div>
                 <!-- Инициализация виджета "Bootstrap datetimepicker" -->
@@ -34,7 +34,7 @@
                 <form method="post">
                 <div class="form-group">
                     <input type="file" name="pic_of_event" id="image">
-                    <input type="text" name="num_of_event">
+                    <input type="text" name="num_of_event" style="margin-top: 5px;">
                     
                 </div>
                 <!-- Инициализация виджета "Bootstrap datetimepicker" -->

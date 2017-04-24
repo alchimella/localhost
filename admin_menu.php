@@ -34,19 +34,19 @@
        <div class="container">
             <div class="tabbable tabs-left">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <ul class="nav nav-pills nav-stacked">
                             <li class="active"><a href="#teachers-tab" data-toggle="tab">Учителя</a></li>
                             <li><a href="#classes-tab" data-toggle="tab">Классы</a></li>
                             <li><a href="#subjects-tab" data-toggle="tab">Предметы</a></li>
                             <li><a href="#student-tab" data-toggle="tab">Ученики</a></li>
-                            <li><a href="#lessons-tab" data-toggle="tab">Расписание уроков</a></li>
+                            <li><a href="#timetable-tab" data-toggle="tab">Расписание уроков</a></li>
                             <li><a href="#events-tab" data-toggle="tab">Мероприятия</a></li>
                             <li><a href="#messages-tab" data-toggle="tab">Рассылка сообщений родителям</a></li>
                         </ul>
                     </div>
 
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <div class="tab-content">
                             <!-- Вкладка Учителя -->
                             <?php require "includes/tab_teacher.php"; ?>
@@ -63,7 +63,8 @@
                             <?php require "includes/tab_student.php"; ?>
                             
                             <!-- Вкладка Расписание уроков -->
-                            <?php //require "includes/tab_student.php"; ?>
+                            
+                            <?php require "includes/tab_timetable.php"; ?>
                             
                             <!-- Вкладка Мероприятия -->
                             <?php require "includes/tab_events.php"; ?>

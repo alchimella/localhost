@@ -10,6 +10,9 @@
           $('[data-toggle="popover"]').popover();
       });
       </script>
+      
+      
+      
       <script src="bootstrap/main.js"></script>
       <!--<script src="js/upload-file.js"></script>-->
       <!-- 1. Подключить библиотеку jQuery -->
@@ -20,6 +23,7 @@
       <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
       <!-- 4. Подключить скрипт виджета "Bootstrap datetimepicker" -->
       <script type="text/javascript" src="bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+      
       <script type="text/javascript">
           $(function () {
           //Установим для виджета русскую локаль с помощью параметра language и значения ru
@@ -44,6 +48,26 @@
             );
           });
       </script>
+      <script type="text/javascript">
+          $(function () {
+          //Установим для виджета русскую локаль с помощью параметра language и значения ru
+          $('#datetimepicker4').datetimepicker(
+              {
+                  format: 'DD/MM/YYYY',
+                  pickTime: false,
+                  language: 'ru'
+              });
+          });
+      </script>
+      <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker5').datetimepicker({
+                    format: 'LT',
+                    language: 'ru',
+                    pickDate: false
+                });
+            });
+        </script>
   </body>
 </html>
        
