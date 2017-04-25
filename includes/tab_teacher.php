@@ -22,31 +22,47 @@
                                 <input type="text" id="theacher_phone" name="phone_of_theacher" style="margin-top: 5px;"><br>
                                 
                                 <div class="form-group">
-                                    <select class="form-control" style="margin-top: 5px; width: 200px;">
-                                        <option>1</option>
+                                    <!--<select class="form-control" style="margin-top: 5px; width: 200px;" name="subj_of_theacher">-->
+                                        
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" name="subj_of_theacher">
+                                            <!--<span class="caret"></span>--></button>
+                                            <ul class="dropdown-menu">
+                                               <?php 
+                                                    $teacher = R::findAll( 'teachers');
+                                                    foreach($teacher as $option){
+                                                        echo '<li>'.$option['subj_of_theacher'].'</li>';
+                                                    }
+                                                ?>
+                                                <!--<li><a href="#">HTML</a></li>
+                                                <li><a href="#">CSS</a></li>
+                                                <li><a href="#">JavaScript</a></li>-->
+                                            </ul>
+                                        </div>
+                                        <!--<option>1</option>
                                         <option>2</option>
                                         <option>3</option>
-                                        <option>4</option>
-                                    </select>
+                                        <option>4</option>-->
+                                    <!--</select>-->
                                 </div>
                                 <br>  
-                                <div class="funkyradio" style="margin-top: -60px;">
+                                <div class="funkyradio" style="margin-top: -60px;" name="check_teacher">
                                     <div class="funkyradio-warning">
                                         <input type="checkbox" name="checkbox" id="checkbox1">
                                         <label for="checkbox1">Классный руководитель</label>
                                     </div>
-                                </div>                                
+                                </div>                               
                             </div>                       
                         </div>
                     </div>
                     <div class="row">
                         <div class="col col-lg-3">
-                            <label for="select-class" style="margin-top: 5px;">Класс</label><br>
+                            <label for="select-class" style="margin-top: 5px;">Класс</label><br>          
                         </div>
                         <div class="col col-lg-4">  
                             <div class="form-group">
-                                <select class="form-control" style="margin-top: 5px; width: 200px; border-color: #EC971F;" name="select_class">
-                                <option>1</option>
+                                <select class="form-control" style="margin-top: 5px; width: 200px; border-color: #EC971F;" name="class_of_theacher">
+                                    <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
                                     <option>4</option>
@@ -58,9 +74,8 @@
                         </div>
                     </div>  
                 </form>
-                <?php
-                    //require "executes/exec_teachers.php"; 
-                ?>
+                <!-- Таблица со списком учителей -->
+                <?php require "executes/exec_teachers.php"; ?>
             </p>
         </div>
     </body>

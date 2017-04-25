@@ -51,8 +51,6 @@
                             <!-- Вкладка Учителя -->
                             <?php require "includes/tab_teacher.php"; ?>
                                
-                            <!-- Таблица со списком учителей -->
-                                  
                             <!-- Вкладка Классы -->
                             <?php require "includes/tab_class.php"; ?>
                             

@@ -1,41 +1,63 @@
 <?php
-if (!empty($_FILES['uploadfile']['name']))
-{
-    $uploaddir='files/';
-    $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
-//  echo $uploadfile.'<br>';
+    require "db.php";
+ /*R::exec('DROP TABLE IF EXISTS `template`');
+            
+            
+          $template=  R::dispense('template');
+          $template->phrase = "text1 --1";
+          $id=R::store($template);
+          unset($template);
+          
+          $template=  R::dispense('template');
+          $template->phrase = "text 2 ";
+          $id=R::store($template);
+                    unset($template);
 
-    if (!is_uploaded_file($_FILES['uploadfile']['tmp_name']))
-    {
-        echo 'ошибка передачи файла';
-    }
-    else
-    {
+          
+          $template=  R::dispense('template');
+          $template->phrase = "text 3";
+          $id=R::store($template);
+                    unset($template);
 
-        if(move_uploaded_file($_FILES['uploadfile']['tmp_name'], $uploadfile))
-        {
-            $tes = "INSERT INTO post VALUE ('".$uploadfile."')";
-//          echo $tes.'<br>';
-            $res = mysql_query($tes);
-            if($res) echo "Файл упешно загружен";
-            else echo "Путь не добавлен в базу данных, но файл загружен ".mysql_error();
-        }
-        else echo "Файл не загружен, ";
+            R::exec('DROP TABLE IF EXISTS `workers`');
+            
+            $templateBeans=R::findAll('template');
+            $templateBean=$templateBeans[1];
+            
+          $worker=  R::dispense('workers');
+          $worker->name = 'jim';
+          $worker->sharedTemplate = array($templateBean);
+          $id=R::store($worker);
+          
+          $worker=  R::dispense('workers');
+          $worker->name = 'dave';
+          $worker->sharedTemplate = array($templateBean);    
+          $id=R::store($worker);
+        $worker=  R::dispense('workers');
+          $worker->name = 'sally';
+          $worker->sharedTemplate = array($templateBean);    
+          $id=R::store($worker);*/
+
+
+$shared = R::findAll( 'template_workers');
+
+echo ('<table class="table">
+                <thead class="thead-inverse">
+                    <tr> 
+                        <th>#</th>
+                        <th>phrase</th>
+                        <th>name</th>
+                    </tr>
+                </thead> 
+                <tbody>');
+      foreach($shared as $row){
+        echo '<tr>';
+        echo '<th class="col col-lg-2">'.$row['id'].'</th>';
+        echo '<td>'.$row['template_id'].'</td>'; 
+        echo '<td>'.$row['workers_id'].'</td>'; 
     }
-}
+    echo ('</tbody></table>');
 ?>
-
-
-<!DOCTYPE html>
-<html>
-<title>Загрузка файла</title>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<body>
-<form action="" method="post" enctype="multipart/form-data">
-<input type="file" name="uploadfile" value="Обзор">
-<input type="submit" value="ok">
-</body>
-</html>
 
 
 
