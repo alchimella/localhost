@@ -1,6 +1,5 @@
 <?php 
-    $teacher = R::findAll( 'teachers');
-
+    $shared_t = R::findAll( 'teachers');
     echo ('<table class="table">
                 <thead class="thead-inverse">
                     <tr> 
@@ -15,13 +14,33 @@
           
     );
     /* Цикл вывода данных из базы полей */
-    foreach($teacher as $row){
+    foreach($shared_t as $row){
         echo '<tr>';
-        echo '<th class="col col-lg-2">'.$row['id'].'</th>';
+        echo '<th class="col col-lg-1">'.$row['id'].'</th>';
         echo '<td>'.$row['num_of_teacher'].'</td>'; 
         echo '<td>'.$row['phone_of_teacher'].'</td>'; 
-        echo '<td>'.$row['subj_of_teacher'].'</td>'; 
-        echo '<td>'.$row['class_of_teacher'].'</td>'; 
+        echo '<td>'.$row['subjects']['num_of_subject'].'</td>'; 
+        echo '<td>'.$row['classes']['num_of_class'].'</td>'; 
     }
     echo ('</tbody></table>');
+
+    $shared = R::findAll( 'template_workers');
+
+    echo ('<table class="table">
+                <thead class="thead-inverse">
+                    <tr> 
+                        <th>#</th>
+                        <th>Phrase</th>
+                        <th>Name</th>
+                    </tr>
+                </thead> 
+                <tbody>');
+      foreach($shared as $row){
+        echo '<tr>';
+        echo '<th class="col col-lg-1">'.$row['id'].'</th>';
+        echo '<td>'.$row['template']['phrase'].'</td>'; 
+        echo '<td>'.$row['workers']['name'].'</td>'; 
+    }
+    echo ('</tbody></table>');
+
 ?>

@@ -28,14 +28,14 @@
                             <span class="fa fa-clock-o"></span>
                         </span>
                     </div>
-                    <div class="form-group">
-                        <select class="form-control" style="margin-top: 5px; width: 200px;" name="select_class">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                        </select>                              
-                    </div>  
+                    <select class="form-control" style="margin-top: 5px; width: 200px;" name="select_class">
+                    <?php 
+                        $cicle_subj=R::findAll('subjects');
+                        foreach($cicle_subj as $c_s){
+                            echo '<option>'.$c_s['num_of_subject'].'</option>';
+                        }
+                    ?>
+                    </select>                               
             </div>
             </div>
             <div class="col col-lg-2">
@@ -44,22 +44,22 @@
                 <label style="margin-top: 5px;">Кабинет</label>
             </div>
             <div class="col col-lg-4">
-                <div class="form-group">
-                    <select class="form-control" style="width: 200px; margin-bottom: 0px;" name="select_class">
-                    <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>                              
-                </div>  
-                <div class="form-group">
-                    <select class="form-control" style="width: 200px; margin-bottom: 0px;" name="select_class">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>                              
-                </div> 
+                <select class="form-control" style="width: 270px; margin-top: 5px;" name="select_class">
+                    <?php 
+                        $cicle_t=R::findAll('teachers');
+                        foreach($cicle_t as $c_t){
+                            echo '<option>'.$c_t['num_of_teacher'].'</option>';
+                        }
+                    ?>
+                </select>                               
+                <select class="form-control" style="width: 200px; margin-top: 5px;" name="select_class">
+                    <?php 
+                        $cicle_cl=R::findAll('classes');
+                        foreach($cicle_cl as $c_c){
+                            echo '<option>'.$c_c['num_of_class'].'</option>';
+                        }
+                    ?>
+                </select>                              
                 <input type="text" style="margin-top: 5px;"> 
             </div>
         </div>

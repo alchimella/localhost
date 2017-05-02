@@ -9,6 +9,7 @@
         if(empty($errors)){
             $post = R::dispense('posts');
             $post->num_of_post = $data['num_of_post'];
+            $post->name_of_pic = $data['name_of_pic'];
             $post->pic_of_post = $data['pic_of_post'];
             $post->data2 = $data['data2'];
             R::store($post); 

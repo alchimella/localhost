@@ -6,7 +6,7 @@
         if(R::count('teachers', 'num_of_theacher = ?', array($data['num_of_theacher'])) > 0 ){
             $errors[] = 'Такой учитель уже существует!';
         }
-        if(empty($errors)){
+        if(!empty($errors)){
             $teacher = R::dispense('teachers');
             $teacher->num_of_theacher = $data['num_of_theacher'];
             $teacher->phone_of_theacher = $data['phone_of_theacher'];
