@@ -18,13 +18,13 @@
                         </div>
                         <div class="col col-lg-8">
                             <div class="form-group margin_top">
-                                <input type="text" id="theacher_name" name="num_of_theacher" style="width: 360px;"><br>     
+                                <input type="text" id="theacher_name" name="name_of_theacher" style="width: 360px;"><br>     
                                 <input type="text" id="theacher_phone" name="phone_of_theacher" style="margin-top: 5px;"><br>
                                 
                                 <div class="form-group">
                                     <select class="form-control" style="margin-top: 5px; width: 200px;" name="subj_of_theacher">
                                         <?php 
-                                            $cicle_sub=R::findAll('subjects');
+                                            $cicle_sub=R::findAll('subjects', 'ORDER BY num_of_subject ASC');
                                             foreach($cicle_sub as $c_s){
                                                 echo '<option>'.$c_s['num_of_subject'].'</option>';
                                             }
@@ -53,7 +53,7 @@
                             <div class="form-group">
                                 <select class="form-control" style="margin-top: 5px; width: 200px; border-color: #EC971F;" name="class_of_theacher">
                                     <?php 
-                                        $cicle_cl=R::findAll('classes');
+                                        $cicle_cl=R::findAll('classes', 'ORDER BY num_of_class ASC');
                                         foreach($cicle_cl as $c_c){
                                             echo '<option>'.$c_c['num_of_class'].'</option>';
                                         }

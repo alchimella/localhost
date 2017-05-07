@@ -1,7 +1,7 @@
 <?php 
-    $class = R::findAll( 'classes');
+    $class = R::findAll( 'classes', 'ORDER BY num_of_class ASC');
 
-    echo ('<table class="table">
+    echo ('<table class="table table-fixed">
                 <thead class="thead-inverse">
                     <tr> 
                         <th>#</th>

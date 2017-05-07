@@ -1,53 +1,27 @@
-$(document).ready(function () {
- 
-  function readImage ( input ) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
- 
-      reader.onload = function (e) {
-        $('#preview').attr('src', e.target.result);
-      }
- 
-      reader.readAsDataURL(input.files[0]);
-    }
-  }
- 
-  function printMessage(destination, msg) {
- 
-    $(destination).removeClass();
- 
-    if (msg == 'success') {
-      $(destination).addClass('alert alert-success').text('Файл успешно загружен.');
-    }
- 
-    if (msg == 'error') {
-      $(destination).addClass('alert alert-danger').text('Произошла ошибка при загрузке файла.');
-    }
- 
-  }
- 
-  $('#image').change(function(){
-    readImage(this);
+$(function() {
+
+  // We can attach the `fileselect` event to all file inputs on the page
+  $(document).on('change', ':file', function() {
+    var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
   });
- 
-  $('#upload-image').on('submit',(function(e) {
-    e.preventDefault();
- 
-    var formData = new FormData(this);
- 
-    $.ajax({
-      type:'POST', // Тип запроса
-      url: 'handler.php', // Скрипт обработчика
-      data: formData, // Данные которые мы передаем
-      cache:false, // В запросах POST отключено по умолчанию, но перестрахуемся
-      contentType: false, // Тип кодирования данных мы задали в форме, это отключим
-      processData: false, // Отключаем, так как передаем файл
-      success:function(data){
-        printMessage('#result', data);
-      },
-      error:function(data){
-        console.log(data);
-      }
-    });
-  }));
+
+  // We can watch for our custom `fileselect` event like this
+  $(document).ready( function() {
+      $(':file').on('fileselect', function(event, numFiles, label) {
+
+          var input = $(this).parents('.input-group').find(':text'),
+              log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+          if( input.length ) {
+              input.val(log);
+          } else {
+              if( log ) alert(log);
+          }
+
+      });
+  });
+  
 });

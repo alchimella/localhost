@@ -14,10 +14,11 @@
                 </form>
                 
                 <!-- Таблица со списком классов -->
-
-                <?php 
-                    require "executes/exec_classes.php"; 
-                ?>
+                <div data-spy="scroll" data-target=".table-example">
+                    <?php 
+                        require "executes/exec_classes.php"; 
+                    ?>
+                </div>
             </p>
         </div>
     </body>

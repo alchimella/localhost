@@ -19,16 +19,18 @@
                       </div>
                       <div class="col col-lg-8">
                           <div class="form-group margin_top">
-                              <input type="text" id="student_name" name="name_of_student" style="width: 360px;"><br>   
-                              <select class="form-control" style="margin-top: 5px; width: 220px;" name="subj_of_theacher">
-                                 <?php 
-                                    $cicle_cl=R::findAll('classes');
-                                    foreach($cicle_cl as $c_c){
-                                        echo '<option>'.$c_c['num_of_class'].'</option>';
-                                    }
-                                 ?>
-                              </select>
-                             
+                              <input type="text" id="student_name" name="name_of_student" style="width: 360px;"><br> 
+                              <form method="post" action="">
+                                  <select class="form-control" style="margin-top: 5px; width: 220px;">
+                                  <?php 
+                                     $cicle_cl=R::findAll('classes', 'ORDER BY num_of_class ASC');
+                                     foreach($cicle_cl as $c_c){
+                                         echo '<option value="'.$c_c['id'].'">'.$c_c['num_of_class'].'</option>';
+                                     }
+                                  ?>
+                                  </select>
+                              </form>   
+                              
                               <input type="text" id="student_gender" name="gender_of_student" style="width: 220px; margin-top: 5px;"><br>
                               <input type="text" id="student_nationality" name="nationality_of_student" style="width: 220px; margin-top: 5px;">
 
@@ -67,6 +69,7 @@
                        </div>
                    </div>                
                </form>
+               <?php require "executes/exec_students.php"; ?>
             </p>
         </div>
     </body>

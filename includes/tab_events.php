@@ -12,13 +12,16 @@
                 <form method="post">
                 <div class="form-group">
                     <input type="file" name="pic_of_post" id="image">
-                    <input type="text" name="num_of_post" style="margin-top: 5px;">
+                    <label for="title_of_post" style="margin-top: 20px;">Тема</label>
+                    <input type="text" name="title_of_post" style="width: 350px;"><br>
+                    <label for="num_of_post" style="margin-top: 20px;">Содержание</label>
+                    <textarea name="num_of_post" style="width: 350px;"></textarea>
                     
                 </div>
                 <!-- Инициализация виджета "Bootstrap datetimepicker" -->
                 <div class="form-group">
                     <!-- Элемент HTML с id равным datetimepicker1 -->
-                    <div class="input-group date" id="datetimepicker2" style="width: 220px; margin-top: 5px;">
+                    <div class="input-group date" id="datetimepicker2" style="width: 350px; margin-top: 5px;">
                         <input type="text" class="form-control" name="data2">
                         <span class="input-group-addon">
                         <span class="fa fa-calendar"></span> 
@@ -31,16 +34,19 @@
             </div>
             <div class="col col-lg-6">
                 <hr>Мероприятия<hr>
-                <form method="post">
+                <form method="post" enctype="multipart/form-data" action="__URL__">
                 <div class="form-group">
                     <input type="file" name="pic_of_event" id="image">
-                    <input type="text" name="num_of_event" style="margin-top: 5px;">
+                    <label for="title_of_event" style="margin-top: 20px;">Тема</label>
+                    <input type="text" name="title_of_event" style="width: 350px;"><br>
+                    <label for="num_of_event" style="margin-top: 20px;">Содержание</label>
+                    <textarea name="num_of_event" style="width: 350px;"></textarea>
                     
                 </div>
                 <!-- Инициализация виджета "Bootstrap datetimepicker" -->
                 <div class="form-group">
                     <!-- Элемент HTML с id равным datetimepicker1 -->
-                    <div class="input-group date" id="datetimepicker3" style="width: 220px; margin-top: 5px;">
+                    <div class="input-group date" id="datetimepicker3" style="width: 350px; margin-top: 5px;">
                         <input type="text" class="form-control" name="data3">
                         <span class="input-group-addon">
                         <span class="fa fa-calendar"></span> 
@@ -51,7 +57,6 @@
                   
                 </form>
             </div>
-            
         </div>
     </body>
 </html>

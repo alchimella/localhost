@@ -23,16 +23,8 @@
                         <ul class="dropdown-menu mega-dropdown-menu">
                             <li class="col-sm-3">
                                 <ul>
-                                    <li class="dropdown-header">Школьная галерея</li> 
-                                    <a class="left carousel-control" href="#menCollection" role="button" data-slide="prev" style="margin-right: 20px; box-shadow: none;">
-                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                        <span class="sr-only">Предыдущее</span>
-                                    </a>
-                                    <a class="right carousel-control" href="#menCollection" role="button" data-slide="next" style="margin-right: 4px; box-shadow: none;">
-                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                        <span class="sr-only">Следующее</span>
-                                    </a>                           
-                                    <div id="menCollection" class="carousel slide" data-ride="carousel">
+                                    <li class="dropdown-header" style="color: #63679F;">Школьная галерея</li>                    
+                                    <div id="schoolGalery" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="item active">
                                                 <a href="#"><img src="http://placehold.it/254x150/ff3546/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>                                     
@@ -53,125 +45,72 @@
                             </li>
                             <li class="col-sm-3">
                             <ul>
-                                <li class="dropdown-header">Features</li>
-                                <li><a href="#">Auto Carousel</a></li>
-                                <li><a href="#">Carousel Control</a></li>
-                                <li><a href="#">Left & Right Navigation</a></li>
-                                <li><a href="#">Four Columns Grid</a></li>
+                                <li class="dropdown-header">О нас</li>
+                                <li><a href="history_page.php">История</a></li>
+                                <li><a href="achievement_page.php">Эмблема</a></li>
+                                <li><a href="#">Достижения</a></li>
                                 <li class="divider"></li>
-                                <li class="dropdown-header">Fonts</li>
-                                <li><a href="#">Glyphicon</a></li>
-                                <li><a href="#">Google Fonts</a></li>
+                                <li class="dropdown-header">Устав</li>
+                                <li><a href="school_charter_page.php">Устав школы</a></li>
+                                <li><a href="objectives_pages.php">Цели и задачи гимназического образования</a></li>
                             </ul>
                             </li>
                                 <li class="col-sm-3">
                                     <ul>
-                                        <li class="dropdown-header">Plus</li>
-                                        <li><a href="#">Navbar Inverse</a></li>
-                                        <li><a href="#">Pull Right Elements</a></li>
-                                        <li><a href="#">Coloured Headers</a></li>                            
-                                        <li><a href="#">Primary Buttons & Default</a></li>							
+                                        <li class="dropdown-header">Учителя</li>
+                                        <li><a href="list_teacher_page.php">Полный список учителей</a></li>
+                                        <li><a href="elementary_class_teacher_page.php">Учителя начальных классов</a></li>
+                                        <li><a href="intermediate_class_teacher_page.php">Учителя старших классов</a></li>                            
+                                        <li><a href="awards_page.php">Достижения и награды</a></li>							
                                     </ul>
                                 </li>
                                 <li class="col-sm-3">
                                     <ul>
-                                        <li class="dropdown-header">Much more</li>
-                                        <li><a href="#">Easy to Customize</a></li>
-                                        <li><a href="#">Calls to action</a></li>
-                                        <li><a href="#">Custom Fonts</a></li>
-                                        <li><a href="#">Slide down on Hover</a></li>                         
+                                        <li class="dropdown-header">Библиотечная служба</li>
+                                        <li><a href="school_library_page.php">Школьная библиотека</a></li>
+                                        <li><a href="medialib_page.php">Медиатека</a></li>                         
                                     </ul>
                                 </li>
                             </ul>				
                         </li>
                         <li class="dropdown mega-dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Для Родителей</a>				
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Для родителей</a>				
                             <ul class="dropdown-menu mega-dropdown-menu">
                                 <li class="col-sm-3">
                                 <ul>
-                                    <li class="dropdown-header">Features</li>
-                                    <li><a href="#">Auto Carousel</a></li>
-                                    <li><a href="#">Carousel Control</a></li>
-                                    <li><a href="#">Left & Right Navigation</a></li>
-                                    <li><a href="#">Four Columns Grid</a></li>
+                                    <li class="dropdown-header">Информация</li>
+                                    <li><a href="admission_to_school_page.php">Прием в школу</a></li>
+                                    <li><a href="parent_meeting_page.php">Родительское собрание</a></li>
+                                    <li><a href="board_of_guardians_page.php">Попечительский совет</a></li>
+                                </ul>
+                                </li>
+                            </ul>				
+                        </li>
+                            <li class="dropdown mega-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Для учеников</a>				
+                            <ul class="dropdown-menu mega-dropdown-menu">
+                                <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Расписание</li>
+                                    <li><a href="schedule_of_lessons_page.php">Расписание уроков</a></li>
+                                    <li><a href="schedule_of_calls_page.php">Расписание звонков</a></li>
+                                    <li><a href="schedule_of_exam_page.php">Расписание экзаменов</a></li>
                                     <li class="divider"></li>
-                                    <li class="dropdown-header">Fonts</li>
-                                    <li><a href="#">Glyphicon</a></li>
-                                    <li><a href="#">Google Fonts</a></li>
+                                    <li><a href="schedule_of_circles_page.php">Расписание кружков</a></li>
+                                    <li><a href="schedule_of_additional_lessons_page.php">Расписание дополнительных занятий</a></li>
                                 </ul>
                                 </li>
                                     <li class="col-sm-3">
                                         <ul>
-                                            <li class="dropdown-header">Plus</li>
-                                            <li><a href="#">Navbar Inverse</a></li>
-                                            <li><a href="#">Pull Right Elements</a></li>
-                                            <li><a href="#">Coloured Headers</a></li>                            
-                                            <li><a href="#">Primary Buttons & Default</a></li>							
-                                        </ul>
-                                    </li>
-                                    <li class="col-sm-3">
-                                        <ul>
-                                            <li class="dropdown-header">Much more</li>
-                                            <li><a href="#">Easy to Customize</a></li>
-                                            <li><a href="#">Calls to action</a></li>
-                                            <li><a href="#">Custom Fonts</a></li>
-                                            <li><a href="#">Slide down on Hover</a></li>                         
-                                        </ul>
-                                    </li>
-                                    <li class="col-sm-3">
-                                        <ul>
-                                            <li class="dropdown-header">Women Collection</li>                            
-                                            <div id="womenCollection" class="carousel slide" data-ride="carousel">
-                                                <div class="carousel-inner">
-                                                    <div class="item active">
-                                                        <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
-                                                        <h4><small>Summer dress floral prints</small></h4>                                        
-                                                        <button class="btn btn-primary" type="button">49,99 €</button> 
-                                                        <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>       
-                                                    </div><!-- End Item -->
-                                                    <div class="item">
-                                                        <a href="#"><img src="http://placehold.it/254x150/ff3546/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
-                                                        <h4><small>Gold sandals with shiny touch</small></h4>                                        
-                                                        <button class="btn btn-primary" type="button">9,99 €</button> 
-                                                        <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>        
-                                                    </div><!-- End Item -->
-                                                    <div class="item">
-                                                        <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
-                                                        <h4><small>Denin jacket stamped</small></h4>                                        
-                                                        <button class="btn btn-primary" type="button">49,99 €</button> 
-                                                        <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>      
-                                                    </div><!-- End Item -->                                
-                                                </div><!-- End Carousel Inner -->
-                                                <!-- Controls -->
-                                                <a class="left carousel-control" href="#womenCollection" role="button" data-slide="prev">
-                                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                                    <span class="sr-only">Previous</span>
-                                                </a>
-                                                <a class="right carousel-control" href="#womenCollection" role="button" data-slide="next">
-                                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                                    <span class="sr-only">Next</span>
-                                                </a>
-                                            </div><!-- /.carousel -->
-                                            <li class="divider"></li>
-                                            <li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                            <li class="dropdown-header">Объявления</li>
+                                            <li><a href="events_page.php">Мероприятия</a></li>
+                                            <li><a href="clean_saturday_page.php">Субботники</a></li>
+                                            <li><a href="straightedge_page.php">Линейки</a></li>						
                                         </ul>
                                     </li>
                                 </ul>				
                             </li>
-                            <li><a href="#">Store locator</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My account</a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">My cart (0) items</a></li>
+                            <li class="mega-dropdown"><a href="#">Дневник</a></li>
                         </ul>
                     </div><!-- /.nav-collapse -->
                 </nav>

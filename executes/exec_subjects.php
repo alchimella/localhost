@@ -1,5 +1,5 @@
 <?php 
-    $subject = R::findAll( 'subjects');
+    $subject = R::findAll( 'subjects', 'ORDER BY num_of_subject ASC');
 
     echo ('<table class="table">
                 <thead class="thead-inverse">

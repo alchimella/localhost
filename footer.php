@@ -8,7 +8,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="col-lg-3 col-md-6">
+                    <!--<div class="col-lg-3 col-md-6">-->
                         <div class="container">
                             <div class="col-lg-3">
                                 <div class="cuadro_intro_hover " style="background-color:#cccccc;">
@@ -44,13 +44,13 @@
                             <div class="col-lg-3 col-md-6">
                                 <h3>Categories:</h3>
                                 <ul>
-                                    <li><a href=""><i class="fa fa-file"></i> Новости</a></li>
-                                    <li><a href=""><i class="fa fa-users"></i> Собрания</a></li>
-                                    <li><a href=""><i class="fa fa-calendar-o"></i> Мероприятия</a></li>
-                                    <li><a href=""><i class="fa fa-list"></i> Расписание</a></li>
-                                    <li><a href=""><i class="fa fa-user"></i> Родителям</a></li>
-                                    <li><a href=""><i class="fa fa-book"></i> Дополнительные занятия</a></li>
-                                    <li><a href=""><i class="fa fa-list-alt"></i> ОРТ</a></li>
+                                    <li><a href="#"><i class="fa fa-file"></i> Новости</a></li>
+                                    <li><a href="parent_meeting_page.php"><i class="fa fa-users"></i> Собрания</a></li>
+                                    <li><a href="events_page.php"><i class="fa fa-calendar-o"></i> Мероприятия</a></li>
+                                    <li><a href="schedule_of_lessons_page.php"><i class="fa fa-list"></i> Расписание</a></li>
+                                    <li><a href="school_library_page.php"><i class="fa fa-book"></i> Библиотека</a></li>
+                                    <li><a href="schedule_of_additional_lessons_page.php"><i class="fa fa-graduation-cap"></i> Дополнительные занятия</a></li>
+                                    <li><a href="list_teacher_page.php"><i class="fa fa-address-book-o"></i> Список учителей</a></li>
                                 </ul>
                             </div>
 
@@ -67,7 +67,7 @@
                             <br>
                             <hr>
                         </div>
-                    </div>
+                    <!--</div>-->
                 </div>
             </div>
         </footer>

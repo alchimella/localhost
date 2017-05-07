@@ -30,7 +30,7 @@
                     </div>
                     <select class="form-control" style="margin-top: 5px; width: 200px;" name="select_class">
                     <?php 
-                        $cicle_subj=R::findAll('subjects');
+                        $cicle_subj=R::findAll('subjects', 'ORDER BY num_of_subject ASC');
                         foreach($cicle_subj as $c_s){
                             echo '<option>'.$c_s['num_of_subject'].'</option>';
                         }
@@ -46,15 +46,15 @@
             <div class="col col-lg-4">
                 <select class="form-control" style="width: 270px; margin-top: 5px;" name="select_class">
                     <?php 
-                        $cicle_t=R::findAll('teachers');
+                        $cicle_t=R::findAll('teachers', 'ORDER BY name_of_teacher ASC');
                         foreach($cicle_t as $c_t){
-                            echo '<option>'.$c_t['num_of_teacher'].'</option>';
+                            echo '<option>'.$c_t['name_of_teacher'].'</option>';
                         }
                     ?>
                 </select>                               
                 <select class="form-control" style="width: 200px; margin-top: 5px;" name="select_class">
                     <?php 
-                        $cicle_cl=R::findAll('classes');
+                        $cicle_cl=R::findAll('classes', 'ORDER BY num_of_class ASC');
                         foreach($cicle_cl as $c_c){
                             echo '<option>'.$c_c['num_of_class'].'</option>';
                         }

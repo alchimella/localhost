@@ -6,6 +6,7 @@
       <script src = "bootstrap/js/bootstrap.js"></script>
       <script src = "bootstrap/js/salvattore.min.js"></script>
       <script src = "js/index_js.js"></script>
+      <script src = "js/upload-file.js"></script>
       <script>$(function(){
           $('[data-toggle="tooltip"]').tooltip();
           $('[data-toggle="popover"]').popover();
