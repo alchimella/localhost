@@ -13,6 +13,7 @@
             $teacher->phone_of_theacher = $data['phone_of_theacher'];
             $teacher->class_of_theacher = $data['class_of_theacher'];
             $teacher->subj_of_theacher = $data['subj_of_theacher'];
+            $teacher->photo_of_theacher = $data['photo_of_theacher'];
             
             R::store($teacher); 
         }        
