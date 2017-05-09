@@ -5,25 +5,24 @@
     </head>
     <body>
         <div class="tab-pane fade" id="subjects-tab">
-            <p>
             <hr>Предметы<hr>
             <form class="form-group" method="POST">
-                <label for="subj">Предмет</label>
-                <input type="text" id="subj" name="num_of_subject">
-                <button class="btn btn-success" style="margin-left: 10px;" name="do_insert_subj">Добавить</button>
+                <div class="row">
+                    <div class="col col-lg-7">
+                        <label for="subj">Предмет</label>
+                        <input type="text" id="subj" name="num_of_subject">
+                        <button class="btn btn-success" style="margin-left: 10px;" name="do_insert_subj">Добавить</button>
+                    </div>
+                    <!-- Таблица со списком предметов -->
+                    <div class="col col-lg-5"> 
+                        <div data-spy="scroll" data-target=".table-example">
+                            <?php 
+                                require "executes/exec_subjects.php"; 
+                            ?>
+                        </div>
+                    </div>
+                </div>
             </form>
-
-            <!-- Таблица со списком предметов -->
-
-            <?php 
-                require "executes/exec_subjects.php"; 
-            ?>
-            </p>
-        </div>
-        <div class="tab-pane fade" id="students-tab">
-            <p>
-                <label for=""></label>
-            </p>
         </div>
     </body>
 </html>

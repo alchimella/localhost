@@ -75,15 +75,7 @@
                 </form>
                 <!-- Таблица со списком учителей -->
                 <?php require "executes/exec_teachers.php"; ?>
-                <script type="text/javascript">
-                    function showMe (box) {
-                        var vis = (box.checked) ? "block" : "none";
-                        $("DIV#div1").fadeIn();
-                        $("DIV#select_class").fadeIn();
-                        document.getElementById('div1').style.display = vis;
-                        document.getElementById('div2').style.display = vis;
-                    }
-                </script>
+                <?php require "includes/include_scripts.php"; ?>
             </p>
         </div>
     </body>
