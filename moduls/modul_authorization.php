@@ -9,7 +9,6 @@
             // логин существует
             if(password_verify($data['password'], $user->password)){
                 $_SESSION['logget_user'] = $user;
-                echo '<div class="alert alert-success alert-dismissible">Вы успешно авторизированы! Можете перейти на <a href="index.php">главную</a> страницу <button type="button" class="close" data-dismiss="alert"><i class="fa fa-times fa-fw"></i> </div>';
             }else{
                 $errors[] = 'Не верно введен пароль!';
             }

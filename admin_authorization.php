@@ -16,7 +16,7 @@
         
         <title>Авторизация</title>
     </head>
-    <body>
+    <body style="background-image: url(images/fonstola.ru-80477.jpg); background-size: cover; background-repeat: no-repeat;">
        <div class="container">
            <div class="row">
               <div class="panel panel-primary">
@@ -24,7 +24,7 @@
                      <h3><i class="fa fa-sign-in"> Вход в систему</i></h3>
                  </div>
                  <hr class="colorgraph">
-                 <form action="/admin_authorization.php" method="post" id="form_authorization">
+                 <form action="admin_menu.php" method="post" id="form_authorization">
                             <input type="text" name="login" value="<?php echo @$data['login']; ?>" placeholder="Логин">
                             <input type="password" name="password" placeholder="Пароль">
                             <br>

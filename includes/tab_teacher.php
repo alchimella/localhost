@@ -11,46 +11,51 @@
                     <div class="row">
                         <div class="col col-lg-3">
                             <div class="form-group">
-                            <label for="theacher_name">ФИО учителя</label><br>
-                            <label for="theacher_phone" style="margin-top: 5px;">Номер телефона</label><br>
-                            <label for="theacher_subject" style="margin-top: 5px;">Предмет</label><br>
+                                <label for="theacher_name">ФИО учителя</label><br>
+                                <label for="theacher_phone">Номер телефона</label><br>
+                                <label for="theacher_subject">Предмет</label><br>
+                                <!--<label for="theacher_email">email</label><br>
+                                <label for="theacher_login">Логин</label><br>
+                                <label for="theacher_password" >Пароль</label>-->
                             <div id="div2" style="display:block; display:none;">
-                                <label for="select-class" id="select_class" style="margin-top: 75px;">Класс</label><br>          
+                                <label for="select-class" id="select_class" style="margin-top: 90px;">Класс</label><br>
                             </div>                         
                             </div>
                         </div>
                         <div class="col col-lg-5">
                             <div class="form-group margin_top">
-                                <input type="text" id="theacher_name" name="name_of_theacher" style="width: 320px;"><br>     
-                                <input type="text" id="theacher_phone" name="phone_of_theacher" style="margin-top: 5px;"><br>
-                                
-                                <div class="form-group">
-                                    <select class="form-control" style="margin-top: 5px; width: 200px;" name="subj_of_theacher">
-                                        <?php 
-                                            $cicle_sub=R::findAll('subjects', 'ORDER BY num_of_subject ASC');
-                                            foreach($cicle_sub as $c_s){
-                                                echo '<option>'.$c_s['num_of_subject'].'</option>';
-                                            }
-                                        ?>
-                                    </select>
-                                </div>
+                                <input type="text" id="theacher_name" name="name_of_teacher" style="width: 320px;"><br>
+                                <input type="text" id="theacher_phone" name="phone_of_teacher" style="margin-top: 5px;"><br>
+                                <select class="form-control" style="margin-top: 5px; width: 200px;" name="subjects_id">
+                                    <?php
+                                    $cicle_sub=R::findAll('subjects', 'ORDER BY num_of_subject ASC');
+                                    foreach($cicle_sub as $c_s){
+                                        echo '<option value="'.$c_s['$id'].'">'.$c_s['num_of_subject'].'</option>';
+                                    }
+                                    ?>
+                                </select>
+                                <!--<input type="text" id="theacher_email" name="email_of_theacher" style="margin-top: 5px;"><br>
+                                <input type="text" id="theacher_login" name="login_of_theacher" style="margin-top: 5px;"><br>
+                                <input type="password" id="theacher_password" name="password_of_theacher" style="margin-top: 5px;">-->
+
+
                                 <br>  
-                                <div class="funkyradio" style="margin-top: -60px;" name="check_teacher">
+                                <div class="funkyradio" name="check_teacher">
                                     <div class="funkyradio-warning">
                                         <input type="checkbox" name="checkbox" id="checkbox1" onClick="showMe(this)">
                                         <label for="checkbox1">Классный руководитель</label>
                                     </div>
                                 </div>                               
-                            </div> 
+                            </div>
                             <div class="form-group" id="div1" style="display:block; display:none;">
-                                <select class="form-control" style="width: 200px; border-color: #EC971F;" name="class_of_theacher">
-                                    <?php 
+                                <select class="form-control" style="width: 200px; border-color: #EC971F;" name="classes_id">
+                                    <?php
                                         $cicle_cl=R::findAll('classes', 'ORDER BY num_of_class ASC');
                                         foreach($cicle_cl as $c_c){
-                                            echo '<option>'.$c_c['num_of_class'].'</option>';
+                                            echo '<option value="'.$c_c['$id'].'">'.$c_c['num_of_class'].'</option>';
                                         }
                                     ?>
-                                </select>                              
+                                </select>
                             </div>
                             <button class="btn btn-success" name="do_insert_teacher">Добавить</button>                       
                         </div>
@@ -69,7 +74,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input id="fakeUploadLogo" class="form-control fake-shadow" placeholder="Выберите фото" style="margin-top: 15px;" readonly>
+                            <!--<input id="fakeUploadLogo" class="form-control fake-shadow" placeholder="" style="margin-top: 15px;" readonly>-->
                         </div>
                     </div>
                 </form>
@@ -78,6 +83,7 @@
                 <?php require "includes/include_scripts.php"; ?>
             </p>
         </div>
+
     </body>
 </html>
                            
