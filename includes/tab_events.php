@@ -31,10 +31,8 @@
                         <div class="col col-lg-9">
                             <input type="text" name="title_of_post" style="width: 350px;"><br>
                             <textarea name="num_of_post" style="width: 350px;"></textarea>
-                            <!-- Инициализация виджета "Bootstrap datetimepicker" -->
                             <div class="form-group">
-                                <!-- Элемент HTML с id равным datetimepicker1 -->
-                                <div class="input-group date" id="datetimepicker2" style="width: 350px; margin-top: 5px;">
+                                <div class="input-group date" id="datetimepicker1" style="width: 350px; margin-top: 5px;">
                                     <input type="text" class="form-control" name="data2">
                                     <span class="input-group-addon">
                                         <span class="fa fa-calendar"></span>
@@ -74,7 +72,7 @@
                             <!-- Инициализация виджета "Bootstrap datetimepicker" -->
                             <div class="form-group">
                                 <!-- Элемент HTML с id равным datetimepicker1 -->
-                                <div class="input-group date" id="datetimepicker3" style="width: 350px; margin-top: 5px;">
+                                <div class="input-group date" id="datetimepicker2" style="width: 350px; margin-top: 5px;">
                                     <input type="text" class="form-control" name="data3">
                                     <span class="input-group-addon">
                                         <span class="fa fa-calendar"></span>

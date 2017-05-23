@@ -32,26 +32,12 @@
                                 <option value="м">Мальчик</option>
                                 <option value="ж">Девочка</option>
                             </select>
-                            <!--<input type="text" id="student_gender" name="gender_of_student" style="width: 220px; margin-top: 5px;"><br>-->
                             <input type="text" id="student_nationality" name="nationality_of_student" style="width: 220px; margin-top: 5px;">
-
-
-                            <!-- Инициализация виджета "Bootstrap datetimepicker" -->
-                            <!--<div class="form-group">
-                                <!-- Элемент HTML с id равным datetimepicker1 -->
-                                <!--<div class="input-group date" id="datetimepicker1" style="width: 220px; margin-top: 5px;">
-                                    <input type="text" class="form-control" />
-                                    <span class="input-group-addon">
-                                <span class="fa fa-calendar"></span>
-                                </span>
-                                </div>
-                            </div>-->
                             <button class="btn btn-success" style="width: 220px; margin-top: 5px; float: left;" name="do_insert_student">Добавить</button>
                         </div>
                     </div>
 
                     <div class="col col-lg-3 col-lf-offset-3">
-                        <!--<img src="http://placehold.it/240x200" alt="" style="border: 5px outset #337AB7;">-->
                         <div class="form-group">
                             <div class="main-photo-preview">
                                 <img class="thumbnail photo-preview" src="http://placehold.it/240x200" title="Preview photo"/>
@@ -65,7 +51,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<input id="fakeUploadPhoto" class="form-control fake-shadow" placeholder="Выберите фото" style="margin-top: 15px;" readonly>-->
                     </div>
                 </div>
                 <hr>Данные о родителях<hr>

@@ -12,11 +12,11 @@
         <link href = "bootstrap/css/bootstrap.css" rel = "stylesheet">
         <link href = "styles/style_authorization.css" rel = "stylesheet">
         <link href = "bootstrap/css/font-awesome.css" rel = "stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href = "https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         
         <title>Авторизация</title>
     </head>
-    <body style="background-image: url(images/fonstola.ru-80477.jpg); background-size: cover; background-repeat: no-repeat;">
+    <body style="background-image: url(images/Blue-textures-2-184.jpg); background-size: cover; background-repeat: no-repeat;">
        <div class="container">
            <div class="row">
               <div class="panel panel-primary">

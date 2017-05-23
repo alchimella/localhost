@@ -44,11 +44,9 @@
                         </div>
                         <div class="col col-lg-2">
                             <label for="homework">Задание</label><br>
-                            <label for="mark">Страница</label><br>
                         </div>
                         <div class="col col-lg-4">
-                            <input type="text" id="homework" name="homework" style="margin-top: 5px;"><br>
-                            <input type="text" id="mark" name="homework_mark" style="margin-top: 5px;">
+                            <input type="text" id="homework" name="homework" style="width: 200px; margin-top: 5px;"><br>
                             <button class="btn btn-success" name="do_insert_meeting" style="width: 200px;margin-top: 5px;">Добавить</button>
                         </div>
                         <div class="row">

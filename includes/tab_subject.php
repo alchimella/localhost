@@ -1,3 +1,4 @@
+<?php require "edit/delete_subject.php" ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,9 +10,14 @@
             <form class="form-group" method="POST">
                 <div class="row">
                     <div class="col col-lg-6">
-                        <label for="subj">Предмет</label>
-                        <input type="text" id="subj" name="num_of_subject">
-                        <button class="btn btn-success" style="margin-left: 10px;" name="do_insert_subj">Добавить</button>
+                        <div class="col col-lg-7">
+                            <label for="subj">Предмет</label>
+                            <input type="text" id="subj" name="num_of_subject">
+                        </div>
+                        <div class="col col-lg-5">
+                            <button class="btn btn-success" style="margin-top: 35px; width: 130px" name="do_insert_subj"><i class="fa fa-plus"></i> Добавить</button>
+                            <button class="btn btn-danger" style="margin-top: 5px; width: 130px;" name="do_delete_subj"><i class="fa fa-trash"></i> Удалить</button>
+                        </div>
                     </div>
                     <!-- Таблица со списком предметов -->
                     <div class="col col-lg-6">

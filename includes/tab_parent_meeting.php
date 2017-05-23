@@ -7,7 +7,7 @@
 <div class="tab-pane fade" id="parent_meeting-tab">
     <div class="row">
         <hr>Родительское собрание<hr>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post">
             <div class="form-group">
                 <div class="col col-lg-3">
                     <label for="class_meeting">Класс</label><br>
@@ -26,14 +26,14 @@
                             }
                             ?>
                         </select>
-                        <div class="input-group date" id="datetimepicker6" style="width: 200px; margin-top: 5px;">
-                            <input type="text" class="form-control" name="data5">
+                        <div class="input-group date" id="datetimepicker9" style="width: 200px; margin-top: 5px;">
+                            <input type="text" class="form-control" name="data_meet">
                             <span class="input-group-addon">
                             <span class="fa fa-calendar"></span>
                             </span>
                         </div>
-                        <div class='input-group date' id='datetimepicker7' style="width: 200px; margin-top: 5px;">
-                            <input type='text' class="form-control" />
+                        <div class='input-group date' id='datetimepicker10' style="width: 200px; margin-top: 5px;">
+                            <input type='text' class="form-control" name="time_meet">
                             <span class="input-group-addon">
                             <span class="fa fa-clock-o"></span>
                             </span>

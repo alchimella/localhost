@@ -1,5 +1,6 @@
 <?php
     require "db.php";
+    require "moduls/modul_meetings.php";
 ?>
 
 <!DOCTYPE html>
