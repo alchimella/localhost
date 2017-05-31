@@ -24,7 +24,7 @@
                      <h3><i class="fa fa-sign-in"> Вход в систему</i></h3>
                  </div>
                  <hr class="colorgraph">
-                 <form action="admin_menu.php" method="post" id="form_authorization">
+                 <form action="" method="post" id="form_authorization">
                             <input type="text" name="login" value="<?php echo @$data['login']; ?>" placeholder="Логин">
                             <input type="password" name="password" placeholder="Пароль">
                             <br>
@@ -36,8 +36,6 @@
               </div>
            </div>
        </div>
-        
-        
         <!-- jQuery -->
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src = "bootstrap/js/bootstrap.js"></script>

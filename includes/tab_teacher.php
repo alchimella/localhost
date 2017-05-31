@@ -1,12 +1,13 @@
+<?php require "functions/function_registration_cl_th.php"?>
 <!DOCTYPE html>
 <html>
     <head>
         <link href = "styles/style_tab_teacher.css" rel = "stylesheet">
     </head>
     <body>
-        <div class="tab-pane active in fade" id="teachers-tab">
+        <div class="tab-pane fade in active" id="teachers-tab">
             <p>
-                <hr>Данные об учителях<hr>
+                <hr><h4><i class="fa fa-address-card-o"></i> Данные об учителях</h4><hr>
                 <form class="form-group" method="POST" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col col-lg-3">
@@ -67,59 +68,37 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col col-lg-3">
-                            <label for="teacher_login" style="margin-top: 20px;">Логин учителя</label><br>
-                            <label for="teacher_pass">Пароль учителя</label>
-                            <label for="teacher_pass2">Повторите пароль</label>
-                        </div>
-                        <div class="col col-lg-5">
-                            <input type="text" id="teacher_login" style="margin-top: 20px; width: 220px;"><br>
-                            <input type="password" id="teacher_pass" style="margin-top: 5px; width: 220px;"><br>
-                            <input type="password" id="teacher_pass2" style="margin-top: 5px; width: 220px;"><br>
-                            <button class="btn btn-warning" style="margin-top: 20px; width: 220px;"><i class="fa fa-key"></i> Регистрация учителя</button>
-                        </div>
-                    </div>
                     <hr>
                     <div class="panel panel-default" style="margin-top: 20px;">
                         <div class="panel-heading">
                             <button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse">Классы, которым ведёт учитель</button>
+                            <ul class="nav navbar-nav navbar-right" style="margin-right: 10px; margin-top: 8px;">...ФИО...</ul>
                         </div>
                         <div class="panel-collapse collapse out">
                             <div class="panel-body">
-                                <div class="col col-lg-5">
-                                    <select class="form-control" style="width: 200px; border-color: #EC971F;" name="teachers_id">
+                                <div class="col col-lg-6">
+                                    <select class="form-control select-id" style="margin-top: 5px; width: 320px;" name="teacher_id">
                                         <?php
-                                            $cicle_th=R::findAll('teachers', 'ORDER BY name_of_teacher ASC');
-                                            foreach($cicle_th as $c_t){
-                                                echo '<option value="'.$c_t['$id'].'">'.$c_t['name_of_teacher'].'</option>';
-                                            }
+                                        $cicle_th=R::findAll('teachers', 'ORDER BY name_of_teacher ASC');
+
+                                        foreach($cicle_th as $c_t){
+                                            echo '<option value="'.$c_t['id'].'">'.$c_t['name_of_teacher'].'</option>';
+                                        }
                                         ?>
                                     </select>
-                                    <select class="form-control" style="width: 200px; margin-top: 5px; border-color: #EC971F;" name="classes_id">
+                                    <select class="form-control" style="margin-top: 5px; width: 220px;" name="clas_id">
                                         <?php
                                         $cicle_cl=R::findAll('classes', 'ORDER BY num_of_class ASC');
                                         foreach($cicle_cl as $c_c){
-                                            echo '<option value="'.$c_c['$id'].'">'.$c_c['num_of_class'].'</option>';
+                                            echo '<option value="'.$c_c['id'].'">'.$c_c['num_of_class'].'</option>';
                                         }
                                         ?>
                                     </select>
                                     <button class="btn btn-success" name="do_insert_choose" style="margin-top: 5px;"><i class="fa fa-plus"></i></button>
                                     <button class="btn btn-danger" style="margin-top: 5px;"><i class="fa fa-trash"></i></button>
                                 </div>
-                                <div class="col col-lg-7">
-                                    <table class="table">
-                                        <thead class="thead-default">
-                                            <tr>
-                                                <th>Классы</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="col col-lg-6">
+                                    <?php require "executes/exec_teacher_class.php"; ?>
                                 </div>
                             </div>
                         </div>
@@ -127,9 +106,9 @@
                 </form>
                 <!-- Таблица со списком учителей -->
                 <?php require "executes/exec_teachers.php"; ?>
-                <?php require "includes/include_scripts.php"; ?>
             </p>
         </div>
+        <?php require "includes/include_scripts.php"; ?>
     </body>
 </html>
                            

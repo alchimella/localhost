@@ -1,4 +1,5 @@
 <?php require "edit/delete_class.php" ?>
+<?php require "functions/function_registration_cl_sb.php"?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,7 +7,7 @@
     </head>
     <body>
         <div class="tab-pane fade" id="classes-tab">
-            <hr>Классы<hr>
+            <hr><h4><i class="fa fa-graduation-cap"></i> Классы</h4><hr>
             <form class="form-group" method="POST">
                 <div class="row">
                     <div class="col col-lg-6">
@@ -31,34 +32,32 @@
                 <div class="panel panel-default" style="margin-top: 5px;">
                     <div class="panel-heading">
                         <button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse">Зарегистрировать класс на предмет</button>
+                        <ul class="nav navbar-nav navbar-right" style="margin-right: 10px; margin-top: 8px;"><?php ы ?>...Класс...</ul>
                     </div>
                     <div class="panel-collapse collapse out">
                         <div class="panel-body">
                             <div class="col col-lg-5">
-                                <select class="form-control" style="width: 200px; margin-top: 5px; border-color: #EC971F;" name="subjects_id">
+                                <select class="form-control" style="margin-top: 5px; width: 220px;" name="class_id">
                                     <?php
-                                    $cicle_cl=R::findAll('subjects', 'ORDER BY num_of_subject ASC');
+                                    $cicle_cl=R::findAll('classes', 'ORDER BY num_of_class ASC');
                                     foreach($cicle_cl as $c_c){
-                                        echo '<option value="'.$c_c['$id'].'">'.$c_c['num_of_subject'].'</option>';
+                                        echo '<option value="'.$c_c['id'].'">'.$c_c['num_of_class'].'</option>';
                                     }
                                     ?>
                                 </select>
-                                <button class="btn btn-success" name="do_insert_choose" style="margin-top: 5px;"><i class="fa fa-plus"></i></button>
+                                <select class="form-control" style="margin-top: 5px; width: 220px;" name="subject_id">
+                                    <?php
+                                    $cicle_sb=R::findAll('subjects', 'ORDER BY num_of_subject ASC');
+                                    foreach($cicle_sb as $c_s){
+                                        echo '<option value="'.$c_s['id'].'">'.$c_s['num_of_subject'].'</option>';
+                                    }
+                                    ?>
+                                </select>
+                                <button class="btn btn-success" name="do_insert_choose_subject" style="margin-top: 5px;"><i class="fa fa-plus"></i></button>
                                 <button class="btn btn-danger" style="margin-top: 5px;"><i class="fa fa-trash"></i></button>
                             </div>
                             <div class="col col-lg-7">
-                                <table class="table">
-                                    <thead class="thead-default">
-                                        <tr>
-                                            <th>Предмет</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <?php require "executes/exec_class_subject.php"; ?>
                             </div>
                         </div>
                     </div>

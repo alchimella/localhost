@@ -21,7 +21,7 @@
             $teacher->subjects_id = $data['subj_id'];
             $teacher->photo_of_theacher = $data['photo_of_theacher'];
             //$teacher->ownClass = array($classBean);
-            // $teacher->ownSubject = array($subjectBean);
+            //$teacher->sharedClass = array($sclassBean);
             R::store($teacher); 
         }        
     }

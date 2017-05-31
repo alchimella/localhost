@@ -2,5 +2,5 @@
     require "db.php";
     unset($_SESSION['logget_user']);
 
-    header('Location: /');
+    header('Location: /admin_authorization.php');
 ?>

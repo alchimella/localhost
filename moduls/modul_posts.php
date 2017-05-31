@@ -10,9 +10,9 @@
             $post = R::dispense('posts');
             $post->title_of_post = $data['title_of_post'];
             $post->num_of_post = $data['num_of_post'];
-            $post->name_of_pic = $data['name_of_pic'];
+            //$post->name_of_pic = $data['name_of_pic'];
             $post->image_post = $data['image_post'];
-            $post->data2 = $data['data2'];
+            $post->registration_date = $data['registration_date'];
             R::store($post); 
         }        
     }

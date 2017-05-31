@@ -6,7 +6,7 @@
     </head>
     <body>
         <div class="tab-pane fade" id="subjects-tab">
-            <hr>Предметы<hr>
+            <hr><h4><i class="fa fa-book"></i> Предметы</h4><hr>
             <form class="form-group" method="POST">
                 <div class="row">
                     <div class="col col-lg-6">

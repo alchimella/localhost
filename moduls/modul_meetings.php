@@ -3,7 +3,7 @@
 
     if(isset($data['do_insert_meeting'])){
         $errors = array();
-        if(R::count('meetings', 'class_of_meeting= ?', array($data['class_of_meeting'])) > 0 ){
+        if(R::count('meetings', 'theme_meeting = ?', array($data['theme_meeting'])) > 0 ){
             $errors[] = 'Такое собрание уже существует!';
         }
         if(empty($errors)){
@@ -11,11 +11,12 @@
             $classBean = $classBeans[1];
 
             $meet = R::dispense('meetings');
-            $meet->class_of_meeting = $data['class_of_meeting'];
-            $meet->data_meet = $data['data_meet'];
-            $meet->time_meet = $data['time_meet'];
+            $meet->theme_meeting = $data['theme_meeting'];
+            $meet->classes_id = $data['clas_id'];
+            $meet->registration_date = $data['registration_date4'];
+            $meet->registration_time = $data['registration_time'];
             //$class->sharedTeacher = array($teacherBean);
-            //$class->ownStudent = array($studentBean);
+            //$meet->ownClass = array($classBean);
             R::store($meet);
         }
     }

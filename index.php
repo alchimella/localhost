@@ -12,7 +12,6 @@
 
         <!-- Bootstrap -->
         <link href = "bootstrap/css/bootstrap.css" rel = "stylesheet">
-
         <link href="styles/style_index.css" rel="stylesheet">
 
         <link href = "bootstrap/css/font-awesome.css" rel = "stylesheet">
@@ -46,7 +45,8 @@
     <div class="container" id="tourpackages-carousel">
         <div class="row">
             <div class="col-xs-18 col-sm-6 col-md-3">  
-                <?php require "executes/exec_posts.php"; ?>
+
+
             </div>   
         </div><!-- End row -->
     </div><!-- End container -->

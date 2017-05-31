@@ -8,7 +8,9 @@
     require "moduls/modul_posts.php";
     require "moduls/modul_events.php";
     require "moduls/modul_timetable.php";
-    require "registration.php";
+    require "moduls/modul_registration.php";
+    require "moduls/modul_timetable_additional.php";
+    require "moduls/modul_timetable_circles.php";
 ?>
 
 <!DOCTYPE html>
@@ -22,21 +24,19 @@
         <link href = "bootstrap/css/bootstrap.css" rel = "stylesheet">
         <link href = "styles/style_admin_menu.css" rel = "stylesheet">
         <link href = "bootstrap/css/font-awesome.css" rel = "stylesheet">
-        <link href = "https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap-datetimepicker.min.css" />
+        <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.css" rel = "stylesheet">
+        <link href = "bootstrap/css/bootstrap-datetimepicker.min.css" rel = "stylesheet">
 
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     </head>
     <body>
         <div class="container">
-           <div class="row">
-               <div class="navbar navbar-inverse">
-                   <form class="navbar-search pull-right">
-                      <input type="text" class="search-query" placeholder="Поиск" style="width: 220px;">
-                   </form>
-               </div>
-           </div>
+            <div class="row">
+                <div class="navbar navbar-inverse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <a href="/logout.php" class="btn btn-primary">Выход</a>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="container">
             <div class="tabbable tabs-left">
@@ -44,6 +44,7 @@
                     <div class="col-md-3">
                         <ul class="nav nav-pills nav-stacked">
                             <li class="active"><a href="#teachers-tab" data-toggle="tab">Учителя</a></li>
+                            <li><a href="#registration-tab" data-toggle="tab">Регистрация учителей</a></li>
                             <li><a href="#classes-tab" data-toggle="tab">Классы</a></li>
                             <li><a href="#subjects-tab" data-toggle="tab">Предметы</a></li>
                             <li><a href="#student-tab" data-toggle="tab">Ученики</a></li>
@@ -57,6 +58,9 @@
                         <div class="tab-content">
                             <!-- Вкладка Учителя -->
                             <?php require "includes/tab_teacher.php"; ?>
+
+                            <!-- Вкладка Регистрация учителей -->
+                            <?php require "includes/tab_registration_teachers.php"; ?>
 
                             <!-- Вкладка Классы -->
                             <?php require "includes/tab_class.php"; ?>

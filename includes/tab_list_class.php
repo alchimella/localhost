@@ -6,20 +6,9 @@
     <body>
         <div class="tab-pane fade" id="class-tab">
             <div class="row">
-                <hr>Ученики класса " ... "<hr>
+                <hr><h4><i class="fa fa-address-card"></i> Ученики класса <...></h4><hr>
                 <div class="col col-lg-7">
-                    <table class="table">
-                        <thead class="thead-inverse">
-                            <tr>
-                                <th>ФИО ученика</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Списки учеников</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <?php require "executes/exec_class_teacher_form.php"; ?>
                 </div>
                 <div class="col col-lg-5">
                     <div class="col col-lg-5">

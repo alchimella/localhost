@@ -5,7 +5,7 @@
     </head>
     <body>
         <div class="tab-pane fade" id="gallary-tab">
-            <hr>Школьная галерея<hr>
+            <hr><h4><i class="fa fa-picture-o"></i> Школьная галерея</h4><hr>
             <div class="col col-lg-3 col-lf-offset-3">
                 <!--<img src="http://placehold.it/240x200" alt="" style="border: 5px outset #337AB7;">-->
                 <div class="form-group">

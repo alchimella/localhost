@@ -53,6 +53,6 @@ body {
     border: 1px solid #ddd;
 }
 .mega-dropdown:hover{
-   border-top: 2px solid #63679F;
+   border-bottom: 2px solid #63679F;
 }
 
